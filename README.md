@@ -1,7 +1,6 @@
-# Employee Directory Web App (Java + FreeMarker + DOM-based JS)
+# Employee Directory Web App (FreeMarker + DOM-based JS)
 
 A simple interactive employee directory web application built with:
-- Java (with embedded HTTP server)
 - FreeMarker template engine for rendering dynamic HTML
 - Vanilla JavaScript for client-side search, filter, sorting, pagination
 - HTML, CSS for frontend styling
