@@ -1,0 +1,445 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.header {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.actions input[type="text"] {
+  padding: 6px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter-btn {
+  padding: 7px 14px;
+  background: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls {
+  background: #eee;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-btn {
+  padding: 7px 14px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls label {
+  margin-left: 10px;
+}
+
+.controls select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.employee-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.employee-card {
+  background: #fff;
+  padding: 15px;
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.employee-card h3 {
+  margin-top: 0;
+}
+
+.card-actions {
+  margin-top: 10px;
+}
+
+.card-actions button {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card-actions button:first-child {
+  background: #007bff;
+  color: white;
+}
+
+.card-actions button:last-child {
+  background: #dc3545;
+  color: white;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.form-container {
+  background: #fff;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  margin-top: 0;
+}
+
+form label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  padding: 7px 14px;
+  background: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-btn {
+  padding: 7px 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.form-container {
+  background: #fff;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.form-container h2 {
+  margin-top: 0;
+}
+
+form label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn {
+  padding: 7px 14px;
+  background: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-btn {
+  padding: 7px 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Sidebar base style */
+/* Sidebar base style */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -320px; /* hide initially */
+  width: 300px;
+  height: 100%;
+  background-color: #f5f5f5;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 9999; /* Ensure it's above everything */
+  overflow-y: auto;
+}
+
+/* Show sidebar when open class is added */
+.sidebar.open {
+  right: 0;
+}
+
+/* Sidebar heading */
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Sidebar form fields */
+.sidebar label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.sidebar input,
+.sidebar select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.sidebar .form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.sidebar .form-actions button {
+  flex: 1;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sidebar button.add-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar button.cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.sidebar button:hover {
+  opacity: 0.9;
+}
+.pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button.active {
+  background: #4CAF50;
+  color: white;
+}
+
+.pagination button:hover {
+  background: #ccc;
+}
+
+/* ==========================
+  📱 Mobile Responsive Styles
+========================== */
+
+/* For screens up to 768px (tablet and mobile) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .actions {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .actions input[type="text"] {
+    flex: 1;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .controls label {
+    margin-left: 0;
+  }
+
+  .employee-list {
+    flex-direction: column;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .employee-card {
+    width: 100%;
+  }
+
+  .form-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .sidebar.open {
+    right: 0;
+  }
+
+  .sidebar .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sidebar .form-actions button {
+    flex: 1;
+    margin: 0;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .pagination button {
+    margin: 5px 3px;
+  }
+}
+
+/* For very small screens up to 480px (phones) */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .actions input[type="text"] {
+    padding: 8px;
+  }
+
+  .filter-btn,
+  .add-btn,
+  .cancel-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls select {
+    width: 100%;
+  }
+
+  .employee-card {
+    padding: 10px;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+}
